@@ -1,19 +1,19 @@
-# AI Agent Platform 🤖
+# AI Agent Platform
 
 A complete, production-ready AI agent platform with FastAPI backend + React frontend. **Fully integrated and ready to use!**
 
-## 🎯 What is This?
+## What is This?
 
 Transform a simple AI agent into a full-featured platform:
-- ✅ **Model Playground** - Chat interface with real agent responses
-- ✅ **Inspect Runs** - View complete execution history with every step
-- ✅ **Manage Tools** - 3 tools ready (calculator, web search, file I/O)
-- ✅ **Agent Engine** - Autonomous multi-step problem solving
-- ✅ **Database** - Automatic run tracking in SQLite
+- **Model Playground** - Chat interface with real agent responses
+- **Inspect Runs** - View complete execution history with every step
+- **Manage Tools** - 3 tools ready (calculator, web search, file I/O)
+- **Agent Engine** - Autonomous multi-step problem solving
+- **Database** - Automatic run tracking in SQLite
 
-**Status: Frontend ↔ Backend = CONNECTED** ✨
+**Status: Frontend ↔ Backend = CONNECTED**
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Frontend (React)  ←→  FastAPI Backend  ←→  Agent Engine  ←→  Tools
@@ -24,7 +24,7 @@ Frontend (React)  ←→  FastAPI Backend  ←→  Agent Engine  ←→  Tools
      └─── AgentPlatform.jsx
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AI-Agent/
@@ -53,17 +53,17 @@ AI-Agent/
 └── requirements.txt        # Python dependencies
 ```
 
-## 🚀 ONE COMMAND START
+## ONE COMMAND START
 
 ```bash
 ./start.sh
 ```
 
 **That's it!** One command starts everything:
-- ✅ Backend API (port 8000)
-- ✅ Frontend UI (port 3000) 
-- ✅ Auto-opens browser
-- ✅ Both running in parallel
+- Backend API (port 8000)
+- Frontend UI (port 3000) 
+- Auto-opens browser
+- Both running in parallel
 
 Press `Ctrl+C` to stop both servers.
 
@@ -90,11 +90,11 @@ Then just run:
 5. Go to **Inspect Runs** to see complete history
 6. Go to **Manage Tools** to see available tools
 
-**That's it!** Everything is connected and working. 🎉
+**That's it!** Everything is connected and working.
 
 ---
 
-## 🧪 Test Backend Only
+## Test Backend Only
 
 If you want to test backend API directly:
 
@@ -112,7 +112,7 @@ curl -X POST http://localhost:8000/api/chat \
 
 Visit: http://localhost:8000/docs
 
-## 🎨 Frontend Integration
+## Frontend Integration
 
 Connect your React frontend (`AgentPlatform.jsx`):
 
@@ -133,7 +133,7 @@ const run = await fetch(`${API_URL}/runs/${run_id}`);
 const { steps } = await run.json();
 ```
 
-## 🔧 API Endpoints
+## API Endpoints
 
 ### Playground (Chat)
 - `POST /api/chat` - Send message, get response + run_id
@@ -151,7 +151,7 @@ const { steps } = await run.json();
 - `PUT /api/tools/{id}` - Update tool (enable/disable)
 - `GET /api/tools/stats/summary` - Get tool stats
 
-## 🛠️ Adding New Tools
+## Adding New Tools
 
 1. Create new file in `tools/` directory:
 
@@ -179,9 +179,9 @@ class MyTool(BaseTool):
         return f"Result: {param}"
 ```
 
-2. Restart server - tool auto-discovered! ✨
+2. Restart server - tool auto-discovered!
 
-## 📊 How It Works
+## How It Works
 
 ### Request Flow
 
@@ -218,31 +218,31 @@ Tool Result: "15 * 3 = 45"
 Agent Response: "The result is 45"
 ```
 
-## 🔍 Database
+## Database
 
 SQLite database (`agent_platform.db`) stores:
 - **runs** - All agent executions
 - **run_steps** - Detailed step-by-step history
 - **tools** - Tool configurations (enabled/disabled)
 
-## 📚 Documentation
+## Documentation
 
 - **README.md** (this file) - Complete setup and usage guide
 - **Architecture.md** - Deep technical architecture and design decisions
 - **API Docs** - http://localhost:8000/docs (interactive, auto-generated)
 
-## 🎯 Features
+## Features
 
-- ✅ **RESTful API** - Clean, documented endpoints
-- ✅ **Tool Calling** - Dynamic tool discovery and execution
-- ✅ **Run Tracking** - Complete execution history
-- ✅ **Database Storage** - Persistent run history
-- ✅ **CORS Enabled** - Ready for React frontend
-- ✅ **Type Safe** - Pydantic models for validation
-- ✅ **Auto Documentation** - Swagger UI at `/docs`
-- ✅ **Extensible** - Easy to add new tools
+- **RESTful API** - Clean, documented endpoints
+- **Tool Calling** - Dynamic tool discovery and execution
+- **Run Tracking** - Complete execution history
+- **Database Storage** - Persistent run history
+- **CORS Enabled** - Ready for React frontend
+- **Type Safe** - Pydantic models for validation
+- **Auto Documentation** - Swagger UI at `/docs`
+- **Extensible** - Easy to add new tools
 
-## 🔜 Next Steps
+## Next Steps
 
 ### Phase 2 (Enhancements)
 - [ ] WebSocket streaming for real-time updates
@@ -258,18 +258,18 @@ SQLite database (`agent_platform.db`) stores:
 - [ ] Monitoring and logging
 - [ ] CI/CD pipeline
 
-## 🤝 Contributing
+## Contributing
 
 1. Create new tool in `tools/`
 2. Add API endpoint in `api/routes/`
 3. Update documentation
 4. Test with frontend
 
-## 📝 License
+## License
 
 MIT
 
-## 🙋 Questions?
+## Questions?
 
 - Check `Architecture.md` for deep dive
 - Visit `/docs` for API reference
@@ -279,5 +279,5 @@ MIT
 
 **Built with**: FastAPI, SQLAlchemy, OpenAI SDK, Pydantic
 
-**Powers**: AgentPlatform.jsx frontend 🚀
+**Powers**: AgentPlatform.jsx frontend
 
